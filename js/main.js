@@ -1,50 +1,16 @@
-/* 
-Hozd létre a szükséges változókat, és definiáld is őket:
-- matrix: ez egy tömb (alapértelmezetten üres), amely az egész játékteret tartalmazza,
-- stepCount: ez egy szám (alapértelmezetten 0), a megtett lépések száma,
-- cols: ez az oszlopok száma (alapértelmezetten 3),
-- rows: ez a sorok száma (alapértelmezetten 3),
-- mark: ez a jel, amellyel játszanak a játékosok (0 vagy X, alapértelmezetten 'X').
-*/
 
-const matrix =[];
-
+let matrix =[];
 let stepCount = 0;
+let cols = 3;
+let rows = 3; 
+let mark = "X";
 
-let cols = (0, 1, 2);
-
-let rows = (0, 1, 2); 
-
-let mark = (mark = 'X');
-
-const initState = () => {document.querySelectorAll('.cell') = initState.fill(0)};
-console.log(initState);
+const elements = document.querySelectorAll(".cell")
+const cells = Array.from(elements);
 
 
-
-
-/**
-Fejtsd ki az initState elnevezésű függvényt, 
-amely feltölti üres mezőkkel a játékteret, 
-tehát az összes sort és oszlopot a mátrixban.
-
-Alkalmazz egymásba ágyazott for ciklusokat
-vagy a fill metódust null értékkel.
-Először a sorokat, majd az oszlopokat töltsd fel,
-de fordítva is csinálhatod.
-
-A fillt alkalmazó megoldásnál a matrix tartalma:
-az oszlopok száma tömbbé alakítva, 
-ezt töltöd fel null-lal,
-majd végigmész a tömbön,
-és meghívsz egy arrow function-t.
-Ez utóbbi visszatérési értéke:
-a sorok száma tömbbé alakítva,
-és feltöltve null-lal.
-@returns void (nem ad vissza semmit)
-*/
 const initState = () => {
-    
+    forciklus egymásba ágyazva col-ra és row-ra is
 }
 
 /**
@@ -85,8 +51,8 @@ Fejtsd ki az increaseCounter elnevezésű függvényt,
 amely a megtett lépések számát növeli eggyel.
 */
 const increaseCounter = () => {
-    
-}
+    stepCount++;
+};
 
 /**
 Fejtsd ki a modifyCell elnevezésű függvényt, 
@@ -111,14 +77,14 @@ const setMark = () => {
 /**
 Fejtsd ki a handleClick elnevezésű függvényt, 
 amely meghívja a következő függvényeket:
-- increaseCounter()
-- modifyCell(event.target)
-- setMark()
-- changeMatrixValue(event.target)
-- checkWinner()
+
 */
 const handleClick = (event) => {
-   
+  increaseCounter();
+  modifyCell(event.target);
+  setMark();
+  changeMatrixValue(event.target);
+  checkWinner();
 }
 
 /**
