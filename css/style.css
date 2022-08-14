@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-* html, body {
+html, body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,25 +22,30 @@ header {
 }
 
 
-.ttt_container {
+.grid_container {
     background-color: #faa83d;
     display: grid;
-    position: relative;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    grid-gap: 10px;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 32% 32% 32%;
+    gap: 10px;
     width: 550px;
     height: 550px;
     margin: auto;
     padding: 10px;
     margin-top: 25px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 500px #faa83d;
 }
 
-.ttt_container > div {
-  background-color: #ffffffcc;
-  border: 1px solid #583b00;
-  text-align: center;
-  font-size: 30px;
+
+.cell {
+  box-sizing:content-box;
+  background-color: #5f3e13;
+  display:inline-flex;
+  justify-content:space-around;
+  align-items: center;
+  color: #ffffffcc;
+  font-size: 5em;
 }
 
 .btn__restart {
@@ -67,7 +72,7 @@ header {
   font-family: 'Roboto', sans-serif;;
   font-weight: 900;
   border-radius: 99px;
-  color: #0c7f32;
+  color: #faa83d;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
@@ -76,5 +81,23 @@ header {
   margin: 4px 2px;
   bottom: 70px;
   right: 160px;
+  cursor: pointer;
+}
+
+.message {
+  background-color: #ffffffcc;
+  border: 10px solid #faa83d;
+  font-family: 'Roboto', sans-serif;;
+  font-weight: 900;
+  border-radius: 99px;
+  color: #5f3e13;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  margin: 4px 2px;
+  bottom: 70px;
+  left: 160px;
   cursor: pointer;
 }
