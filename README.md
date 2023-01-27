@@ -1,5 +1,8 @@
 # Tic-tac-toe   
 
+It was a project from school, check the working app here: https://utnesz.github.io/TicTacToe/
+
+
 Egy egyszerű 3x3-as amőba játékot kell készítened.
 
 ![image](https://user-images.githubusercontent.com/68642008/182359118-b5928000-7646-4a64-8310-5af4b6c0c4ab.png)
